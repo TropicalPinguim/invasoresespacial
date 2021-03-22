@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://scripts/vidas.gd" type="Script" id=1]
+[ext_resource path="res://sprites/Ship-sheet.png" type="Texture" id=2]
+[ext_resource path="res://fonts/PrStart.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 8
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 3 )
+
+[node name="HUD" type="Node"]
+
+[node name="pontos" type="Label" parent="."]
+margin_right = 224.0
+margin_bottom = 16.0
+custom_fonts/font = SubResource( 1 )
+text = "999999"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="vidas" type="Node2D" parent="."]
+script = ExtResource( 1 )
+textura = ExtResource( 2 )

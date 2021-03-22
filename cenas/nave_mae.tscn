@@ -1,0 +1,68 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://sprites/ufo_sheet.png" type="Texture" id=1]
+[ext_resource path="res://samples/mother_ship.wav" type="AudioStream" id=2]
+[ext_resource path="res://scripts/nave_mae.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "defaulf"
+length = 0.4
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.2 )
+}
+
+[sub_resource type="Animation" id=2]
+length = 4.0
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:position:x")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 224, -0.25, 0, 0.25, 0, -9, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3.9 )
+}
+tracks/1/type = "bezier"
+tracks/1/path = NodePath(".:position:y")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"points": PoolRealArray( 22, -0.25, 0, 0.25, 0, 22, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 3.9 )
+}
+
+[node name="nave_mae" type="Area2D"]
+position = Vector2( 224, 22 )
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+hframes = 2
+
+[node name="nave_mae_animation" type="AnimationPlayer" parent="Sprite"]
+autoplay = "defaulf"
+anims/defaulf = SubResource( 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -7, 4, -6, 4, -5, 2, -3, 2, -3, 3, 3, 3, 3, 2, 5, 2, 6, 4, 7, 4, 6, 1, 7, 1, 7, -1, 4, -3, 2, -3, 2, -2, -2, -2, -2, -3, -4, -3, -7, -1, -7, 1.00051, -6, 1 )
+
+[node name="animation" type="AnimationPlayer" parent="."]
+autoplay = "default"
+anims/default = SubResource( 2 )
+
+[node name="som_nave_mae" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 2 )
+autoplay = true
