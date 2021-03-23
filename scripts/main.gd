@@ -21,7 +21,7 @@ var pontuacaos = [
 ]
 
 func _ready():
-	#lendo_pontos()
+	lendo_pontos()
 	$top_10.mostrando_pontuandos(pontuacaos)
 	
 func novo_jogo():
@@ -50,7 +50,7 @@ func sinal_de_fim_de_jogo():
 		seletor_de_nomes.connect("terminou", self, "guarda_pontos")
 		yield(seletor_de_nomes, "terminou")
 		seletor_de_nomes.queue_free()
-		#salva_pontos()
+		salva_pontos()
 		
 	$bt_novo_jogo.show();
 	$top_10.show()
@@ -66,21 +66,21 @@ func sinal_da_vitoria():
 	novo_jogo()
 	jogo.dados = dados
 
-#func salva_pontos():
-#	var arquivo = File.new();
-#	var resultado = arquivo.open(arquivo_pontuandos, arquivo.WRITE)
-#	if resultado == OK:
-#		var quardando_pontos = {
-#		  pontos = pontuacaos
-#		};
-#		arquivo.store_line(to_json(quardando_pontos));
-#		arquivo.close();
-#		
-#func lendo_pontos():
-#	var arquivo = File.new();
-#	var resultado = arquivo.open(arquivo_pontuandos, arquivo.READ)
-#	if resultado == OK:
-#		var text = arquivo.get_as_text();
-#		var ler_pontos = parse_json(text)
-#		pontuacaos = ler_pontos.pontos
-#		arquivo.close();
+func salva_pontos():
+	var arquivo = File.new();
+	var resultado = arquivo.open(arquivo_pontuandos, File.WRITE)
+	if resultado == OK:
+		var quardando_pontos = {
+		  pontos = pontuacaos
+		}
+		arquivo.store_line(to_json(quardando_pontos));
+		arquivo.close();
+		
+func lendo_pontos():
+	var arquivo = File.new();
+	var resultado = arquivo.open(arquivo_pontuandos, File.READ)
+	if resultado == OK:
+		var text = arquivo.get_as_text();
+		var ler_pontos = parse_json(text)
+		pontuacaos = ler_pontos.pontos
+		arquivo.close();
