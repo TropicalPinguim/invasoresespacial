@@ -1,6 +1,6 @@
 extends Area2D
 #------------------------------- pré load -------------------------------------#
-var preload_tiro = preload("res://cenas/tiro_navinha.tscn");
+var preload_tiro = preload("res://cenas/tiro_navinha.tscn")
 
 #------------------------- declarando constantes ------------------------------#
 #velocidade que o player "navinha",se movimenta para os lados.
@@ -34,9 +34,16 @@ func _process(delta):
 	#caso seja apertado o botao para direita percorra um pixel a direta.
 	if direita:
 		direcao += 1
+		$sprite.set_frame(1)
+	else:
+		$sprite.set_frame(0)
 	#caso seja apertado o botao para esquerdo percorra um pixel a esquerda.
 	if esquerda:
 		direcao -= 1
+		$sprite.set_frame(2)
+	else:
+		$sprite.set_frame(0)
+		
 	translate(Vector2(1,0) * velocidade * direcao * delta);
 	limitar_paredes()
 	disparar()
@@ -47,7 +54,7 @@ func limitar_paredes():
 	# a possiçao minima é equivalente ao minimo + metade do tamanho da nave.
 	# a possiçao maxima é equivalente ao maximo - metade do tamanho da nave.
 	set_global_position(
-	(Vector2(clamp(get_global_position().x, 7, 217),get_global_position().y))
+	(Vector2(clamp(get_global_position().x, 8, 172),get_global_position().y))
 	)
 
 
@@ -94,4 +101,3 @@ func destruir(obj):
 		esta_vivo = true
 		# volta o sprite para o frama principal
 		$sprite.set_frame(0)
-

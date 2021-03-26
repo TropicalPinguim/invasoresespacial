@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InvaderC_sheet.png-b136ed81c887326a8134d54b8942ff29.stex"
+path="res://.import/ufo_vermelho_alien.png-52748f7491adb8ce3fcf4a7e49f48f9c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/InvaderC_sheet.png"
-dest_files=[ "res://.import/InvaderC_sheet.png-b136ed81c887326a8134d54b8942ff29.stex" ]
+source_file="res://sprites/ufo_vermelho_alien.png"
+dest_files=[ "res://.import/ufo_vermelho_alien.png-52748f7491adb8ce3fcf4a7e49f48f9c.stex" ]
 
 [params]
 

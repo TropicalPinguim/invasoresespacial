@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/InvaderB_sheet.png-3632559db7876d3a48207d0411bd4c07.stex"
+path="res://.import/ufo_azul_alien.png-85bc7937172367df489ca95fffc5f292.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/InvaderB_sheet.png"
-dest_files=[ "res://.import/InvaderB_sheet.png-3632559db7876d3a48207d0411bd4c07.stex" ]
+source_file="res://sprites/ufo_azul_alien.png"
+dest_files=[ "res://.import/ufo_azul_alien.png-85bc7937172367df489ca95fffc5f292.stex" ]
 
 [params]
 

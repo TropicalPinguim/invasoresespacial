@@ -5,7 +5,9 @@
 [ext_resource path="res://sprites/invasoresespaciais.png" type="Texture" id=3]
 [ext_resource path="res://scripts/main.gd" type="Script" id=4]
 
-[sub_resource type="StyleBoxEmpty" id=1]
+[sub_resource type="DynamicFont" id=1]
+size = 8
+font_data = ExtResource( 1 )
 
 [sub_resource type="StyleBoxEmpty" id=2]
 
@@ -15,9 +17,7 @@
 
 [sub_resource type="StyleBoxEmpty" id=5]
 
-[sub_resource type="DynamicFont" id=6]
-size = 8
-font_data = ExtResource( 1 )
+[sub_resource type="StyleBoxEmpty" id=6]
 
 [sub_resource type="DynamicFont" id=7]
 size = 8
@@ -28,35 +28,36 @@ script = ExtResource( 4 )
 
 [node name="novo_jogo" type="Node" parent="."]
 
+[node name="top_10" parent="." instance=ExtResource( 2 )]
+margin_top = 85.8413
+margin_right = 180.0
+margin_bottom = 215.841
+
+[node name="melhores" type="Label" parent="top_10"]
+margin_right = 180.0
+margin_bottom = 8.0
+custom_fonts/font = SubResource( 1 )
+text = "MELHORES JOGADORES"
+align = 1
+
 [node name="bt_novo_jogo" type="Button" parent="."]
-margin_left = 70.0
-margin_top = 210.0
-margin_right = 154.0
-margin_bottom = 232.0
-custom_styles/hover = SubResource( 1 )
-custom_styles/pressed = SubResource( 2 )
-custom_styles/focus = SubResource( 3 )
-custom_styles/disabled = SubResource( 4 )
-custom_styles/normal = SubResource( 5 )
-custom_fonts/font = SubResource( 6 )
+margin_left = 49.4939
+margin_top = 250.305
+margin_right = 133.494
+margin_bottom = 272.305
+custom_styles/hover = SubResource( 2 )
+custom_styles/pressed = SubResource( 3 )
+custom_styles/focus = SubResource( 4 )
+custom_styles/disabled = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+custom_fonts/font = SubResource( 7 )
 text = "NOVO JOGO"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="top_10" parent="." instance=ExtResource( 2 )]
-margin_top = 70.0
-margin_right = 224.0
-margin_bottom = 200.0
-
-[node name="melhores" type="Label" parent="top_10"]
-margin_right = 224.0
-margin_bottom = 8.0
-custom_fonts/font = SubResource( 7 )
-text = "MELHORES JOGADORES"
-align = 1
-
 [node name="titulo" type="Sprite" parent="."]
-position = Vector2( 112, 40 )
+position = Vector2( 0.374573, 0.625423 )
 texture = ExtResource( 3 )
+centered = false
 [connection signal="pressed" from="bt_novo_jogo" to="." method="_on_bt_novo_jogo_pressed"]

@@ -7,7 +7,7 @@ export var vidas = 3 setget set_vidas;
 func _draw():
 	for v in range(vidas):
 		draw_texture_rect_region(textura , 
-		Rect2(v * 18,0,15,8),Rect2(0,0,15,8),Color(1,1,1,1),false)
+		Rect2(v * 18,0,16,16),Rect2(0,0,16,16),Color(1,1,1,1),false)
 
 func set_vidas(valor):
 	vidas = valor

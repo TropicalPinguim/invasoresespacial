@@ -1,10 +1,10 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://sprites/InvaderC_sheet.png" type="Texture" id=1]
+[ext_resource path="res://sprites/ufo_azul_alien.png" type="Texture" id=1]
 [ext_resource path="res://scripts/aliens.gd" type="Script" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 5.88387, 3.92726 )
+extents = Vector2( 8, 5.98154 )
 
 [node name="aliens" type="Area2D"]
 collision_layer = 2

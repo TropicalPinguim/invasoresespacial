@@ -47,7 +47,7 @@ func _tiro_alien():
 		# faz um alien ainda vivo, atirar.
 		tiro_alien.set_global_position(alien.get_global_position())
 		
-func _on_timer_movimento_timeout():#ok
+func _on_timer_movimento_timeout():
 	
 	#sons.append(notas)
 	notas += 1
@@ -58,13 +58,13 @@ func _on_timer_movimento_timeout():#ok
 	
 	for alien in $aliens.get_children():
 		alien.proximo_frame()
-		if alien.get_global_position().x>217 and direcao > 0:
+		if alien.get_global_position().x>164 and direcao > 0:
 			direcao = -1
 			borda = true
-		if alien.get_global_position().x<12 and direcao < 0:
+		if alien.get_global_position().x<16 and direcao < 0:
 			direcao = 1
 			borda = true
-		if alien.get_global_position().y > 230:
+		if alien.get_global_position().y > 300:
 			emit_signal("terra_dominada")
 			
 	if borda:
@@ -72,18 +72,18 @@ func _on_timer_movimento_timeout():#ok
 		# o tempo de chegada ate a borda diminua. 
 		translate(Vector2(0,8))
 		if $timer_movimento.get_wait_time() > .11:
-			$timer_movimento.set_wait_time($timer_movimento.get_wait_time()-.06)
+			$timer_movimento.set_wait_time($timer_movimento.get_wait_time()-.08)
 	else:
 		# caso contrario mude de direção.
 		translate(velocidade * direcao);
 
-func _on_timer_tiro_alien_timeout():#ok
+func _on_timer_tiro_alien_timeout():
 	# Está função, decide de forma aliatoria, o tempo entre os disparos.
 	# Podendo ser entre 0,5 segundo ate 2 segundos.
 	$timer_tiro_alien.set_wait_time(rand_range(.5 , 2));
 	_tiro_alien();
 
-func _chame_sinal_destroido(alien):#ok
+func _chame_sinal_destroido(alien):
 	# executa o som da explosão.
 	$som_explosao_alienigina.play()
 	# emite um sinal, avisando que um alienigina foi destruido.
@@ -108,11 +108,11 @@ func _on_timer_nave_mae_timeout():
 	get_parent().add_child(nave_mae)
 	restart_nave_mae()
 	
-func restart_nave_mae():#ok
+func restart_nave_mae():
 	$timer_nave_mae.set_wait_time(rand_range(6,16))
 	$timer_nave_mae.start()
 		
-func para_tudo():#ok
+func para_tudo():
 	$timer_nave_mae.stop()
 	$timer_tiro_alien.stop()
 	$timer_movimento.stop()

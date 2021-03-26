@@ -1,11 +1,14 @@
 extends Node
 const arquivo_pontuandos = "res://arquivo_pontuandos";
 
-var pre_seletor_de_nomes = preload("res://cenas/seletor_de_nome.tscn");
-var pre_jogo = preload("res://cenas/jogo.tscn");
+var pre_seletor_de_nomes = preload("res://cenas/seletor_de_nome.tscn")
+var pre_jogo = preload("res://cenas/jogo.tscn")
+
+#------------------------- declarando variaveis -------------------------------#
 
 var jogo;
 var hiscore;
+
 # modelo de pontuação padrao.
 var pontuacaos = [ 
 	{n = "AAA", p = 1200},
@@ -52,9 +55,10 @@ func sinal_de_fim_de_jogo():
 		seletor_de_nomes.queue_free()
 		salva_pontos()
 		
-	$bt_novo_jogo.show();
+	$bt_novo_jogo.show()
 	$top_10.show()
 	$top_10.mostrando_pontuandos(pontuacaos)
+	
 	
 func guarda_pontos(valor):
 	var index = pontuacaos.find(hiscore)

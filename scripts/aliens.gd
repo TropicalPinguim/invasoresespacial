@@ -10,15 +10,15 @@ signal destroido(obj);# sinal de destruição
 
 var atributos= [# vetor que carrega o sprite alienigina e seu valor na potuação.
 	{
-		texture = preload("res://sprites/InvaderA_sheet.png"),
+		texture = preload("res://sprites/ufo_vermelho_alien.png"),
 		pontuacao = 10
 	},
 	{
-		texture = preload("res://sprites/InvaderB_sheet.png"),
+		texture = preload("res://sprites/ufo_amarelo_alien.png"),
 		pontuacao = 20
 	},
 	{
-		texture = preload("res://sprites/InvaderC_sheet.png"),
+		texture = preload("res://sprites/ufo_azul_alien.png"),
 		pontuacao = 30
 	}
 ]
@@ -36,7 +36,7 @@ func _draw():
 	
 func setTipo(val):
 	tipo = val;
-	# essa metodo permite visualizar na tela a mudança de inimigo no modo editor.
+# essa método permite visualizar na tela a mudança de inimigo no modo editor.
 	if is_inside_tree() and get_tree().is_editor_hint():
 		update();
 		
@@ -48,7 +48,7 @@ func destruir(obj):
 	
 	
 func proximo_frame():
-	# Esta função, faz com que mude o frame, cada vez que o alien se move.
+	# Esta função, faz com que mude o frame, cada vez que o nave se move.
 	if frame == 0:
 		frame = 1;
 	else:

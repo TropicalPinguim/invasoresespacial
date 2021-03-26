@@ -21,212 +21,136 @@ script = ExtResource( 6 )
 [node name="aliens" type="Node2D" parent="grupo_alienigina"]
 
 [node name="001" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 42, 60 )
+position = Vector2( 36, 40 )
 
 [node name="002" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 56, 60 )
+position = Vector2( 54, 40 )
 
 [node name="003" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 70, 60 )
+position = Vector2( 72, 40 )
 
 [node name="004" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 84, 60 )
+position = Vector2( 90, 40 )
 
 [node name="005" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 98, 60 )
+position = Vector2( 108, 40 )
 
 [node name="006" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 112, 60 )
+position = Vector2( 126, 40 )
 
 [node name="007" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 126, 60 )
-
-[node name="008" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 140, 60 )
-
-[node name="009" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 154, 60 )
-
-[node name="010" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 168, 60 )
-
-[node name="011" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 182, 60 )
+position = Vector2( 144, 40 )
 
 [node name="012" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 42, 70 )
+position = Vector2( 36, 56 )
 tipo = 1
 
 [node name="013" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 56, 70 )
+position = Vector2( 54, 56 )
 tipo = 1
 
 [node name="014" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 70, 70 )
+position = Vector2( 72, 56 )
 tipo = 1
 
 [node name="015" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 84, 70 )
+position = Vector2( 90, 56 )
 tipo = 1
 
 [node name="016" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 98, 70 )
+position = Vector2( 108, 56 )
 tipo = 1
 
 [node name="017" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 112, 70 )
+position = Vector2( 126, 56 )
 tipo = 1
 
 [node name="018" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 126, 70 )
+position = Vector2( 144, 56 )
 tipo = 1
 
 [node name="019" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 140, 70 )
+position = Vector2( 36, 72 )
 tipo = 1
 
 [node name="020" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 154, 70 )
+position = Vector2( 54, 72 )
 tipo = 1
 
 [node name="021" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 168, 70 )
+position = Vector2( 72, 72 )
 tipo = 1
 
 [node name="022" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 182, 70 )
+position = Vector2( 90, 72 )
 tipo = 1
 
 [node name="023" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 42, 80 )
+position = Vector2( 108, 72 )
 tipo = 1
 
 [node name="024" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 56, 80 )
+position = Vector2( 126, 72 )
 tipo = 1
 
 [node name="025" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 70, 80 )
-tipo = 1
-
-[node name="026" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 84, 80 )
-tipo = 1
-
-[node name="027" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 98, 80 )
-tipo = 1
-
-[node name="028" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 112, 80 )
-tipo = 1
-
-[node name="029" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 126, 80 )
-tipo = 1
-
-[node name="030" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 140, 80 )
-tipo = 1
-
-[node name="031" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 154, 80 )
-tipo = 1
-
-[node name="032" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 168, 80 )
-tipo = 1
-
-[node name="033" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 182, 80 )
+position = Vector2( 144, 72 )
 tipo = 1
 
 [node name="034" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 42, 90 )
+position = Vector2( 36, 88 )
 tipo = 0
 
 [node name="035" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 56, 90 )
+position = Vector2( 54, 88 )
 tipo = 0
 
 [node name="036" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 70, 90 )
+position = Vector2( 72, 88 )
 tipo = 0
 
 [node name="037" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 84, 90 )
+position = Vector2( 90, 88 )
 tipo = 0
 
 [node name="038" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 98, 90 )
+position = Vector2( 108, 88 )
 tipo = 0
 
 [node name="039" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 112, 90 )
+position = Vector2( 126, 88 )
 tipo = 0
 
 [node name="040" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 126, 90 )
-tipo = 0
-
-[node name="041" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 140, 90 )
-tipo = 0
-
-[node name="042" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 154, 90 )
-tipo = 0
-
-[node name="043" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 168, 90 )
-tipo = 0
-
-[node name="044" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 182, 90 )
+position = Vector2( 144, 88 )
 tipo = 0
 
 [node name="045" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 42, 100 )
+position = Vector2( 36, 104 )
 tipo = 0
 
 [node name="046" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 56, 100 )
+position = Vector2( 54, 104 )
 tipo = 0
 
 [node name="047" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 70, 100 )
+position = Vector2( 72, 104 )
 tipo = 0
 
 [node name="048" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 84, 100 )
+position = Vector2( 90, 104 )
 tipo = 0
 
 [node name="049" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 98, 100 )
+position = Vector2( 108, 104 )
 tipo = 0
 
 [node name="050" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 112, 100 )
+position = Vector2( 126, 104 )
 tipo = 0
 
 [node name="051" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 126, 100 )
-tipo = 0
-
-[node name="052" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 140, 100 )
-tipo = 0
-
-[node name="053" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 154, 100 )
-tipo = 0
-
-[node name="054" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 168, 100 )
-tipo = 0
-
-[node name="055" parent="grupo_alienigina/aliens" instance=ExtResource( 5 )]
-position = Vector2( 182, 100 )
+position = Vector2( 144, 104 )
 tipo = 0
 
 [node name="timer_movimento" type="Timer" parent="grupo_alienigina"]
@@ -258,22 +182,22 @@ stream = ExtResource( 11 )
 [node name="nota4" type="AudioStreamPlayer" parent="grupo_alienigina"]
 
 [node name="navinha" parent="." instance=ExtResource( 1 )]
-position = Vector2( 112, 240 )
+position = Vector2( 90, 304 )
 collision_mask = 7
 
 [node name="escudos" type="Node" parent="."]
 
 [node name="escudo" parent="escudos" instance=ExtResource( 2 )]
-position = Vector2( 28, 220 )
+position = Vector2( 36, 288 )
 
 [node name="escudo2" parent="escudos" instance=ExtResource( 2 )]
-position = Vector2( 84, 220 )
+position = Vector2( 72, 288 )
 
 [node name="escudo3" parent="escudos" instance=ExtResource( 2 )]
-position = Vector2( 140, 220 )
+position = Vector2( 108, 288 )
 
 [node name="escudo4" parent="escudos" instance=ExtResource( 2 )]
-position = Vector2( 196, 220 )
+position = Vector2( 144, 288 )
 
 [node name="HUD" parent="." instance=ExtResource( 3 )]
 [connection signal="timeout" from="grupo_alienigina/timer_movimento" to="grupo_alienigina" method="_on_timer_movimento_timeout"]

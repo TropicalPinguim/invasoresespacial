@@ -8,7 +8,7 @@ func _ready():
 	set_process(true);
 func _process(delta):
 	translate(dir * vel * delta);
-	if get_global_position().y > 275:
+	if get_global_position().y > 320:
 		destruir(self);
 func destruir(obj):
 	queue_free();
