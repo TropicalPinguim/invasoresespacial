@@ -6,16 +6,12 @@ const colors =  ["FF0000","19A6FF","00B333","00FF48","B31212","F0801D",
 "D62AFA", "804FF0", "E32B68", "61F01D"];
 
 func mostrando_pontuandos(pontuacaos):
-	#for c in get_children():
-		
-		#if c 
-			#c.queue_free()
+	
 	var item  = pre_item.instance();
 	item.pos = "RANK";
 	item.nome = "NOME";
 	item.pontos = "PONTOS";
 	add_child(item);
-	
 	var a = 0;
 	for pontinhos in pontuacaos:
 		item  = pre_item.instance();

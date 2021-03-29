@@ -28,6 +28,17 @@ script = ExtResource( 4 )
 
 [node name="novo_jogo" type="Node" parent="."]
 
+[node name="game_over" type="Label" parent="."]
+margin_top = 156.0
+margin_right = 180.0
+margin_bottom = 164.0
+custom_fonts/font = SubResource( 1 )
+text = "GAME OVER"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="top_10" parent="." instance=ExtResource( 2 )]
 margin_top = 85.8413
 margin_right = 180.0
@@ -51,6 +62,7 @@ custom_styles/focus = SubResource( 4 )
 custom_styles/disabled = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 custom_fonts/font = SubResource( 7 )
+button_mask = 5
 text = "NOVO JOGO"
 __meta__ = {
 "_edit_use_anchors_": false

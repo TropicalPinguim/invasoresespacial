@@ -8,6 +8,10 @@ var pre_jogo = preload("res://cenas/jogo.tscn")
 
 var jogo;
 var hiscore;
+var senha = [
+84,37,103,71,123,
+104,89,93,40,74
+];
 
 # modelo de pontuação padrao.
 var pontuacaos = [ 
@@ -24,6 +28,7 @@ var pontuacaos = [
 ]
 
 func _ready():
+	$game_over.hide()
 	lendo_pontos()
 	$top_10.mostrando_pontuandos(pontuacaos)
 	
@@ -39,6 +44,7 @@ func _on_bt_novo_jogo_pressed():
 	$bt_novo_jogo.hide()
 	$top_10.hide()
 	$titulo.hide()
+	$game_over.hide()
 	novo_jogo()
 	
 func sinal_de_fim_de_jogo():
@@ -54,10 +60,8 @@ func sinal_de_fim_de_jogo():
 		yield(seletor_de_nomes, "terminou")
 		seletor_de_nomes.queue_free()
 		salva_pontos()
-		
 	$bt_novo_jogo.show()
-	$top_10.show()
-	$top_10.mostrando_pontuandos(pontuacaos)
+	$game_over.show()
 	
 	
 func guarda_pontos(valor):
@@ -72,7 +76,10 @@ func sinal_da_vitoria():
 
 func salva_pontos():
 	var arquivo = File.new();
-	var resultado = arquivo.open(arquivo_pontuandos, File.WRITE)
+	
+	var resultado = arquivo.open_encrypted_with_pass(arquivo_pontuandos, 
+	File.WRITE, PoolByteArray(senha).get_string_from_utf8())
+	
 	if resultado == OK:
 		var quardando_pontos = {
 		  pontos = pontuacaos
@@ -82,7 +89,10 @@ func salva_pontos():
 		
 func lendo_pontos():
 	var arquivo = File.new();
-	var resultado = arquivo.open(arquivo_pontuandos, File.READ)
+	
+	var resultado = arquivo.open_encrypted_with_pass(arquivo_pontuandos, 
+	File.READ,PoolByteArray(senha).get_string_from_utf8())
+	
 	if resultado == OK:
 		var text = arquivo.get_as_text();
 		var ler_pontos = parse_json(text)

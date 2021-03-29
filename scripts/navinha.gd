@@ -34,15 +34,9 @@ func _process(delta):
 	#caso seja apertado o botao para direita percorra um pixel a direta.
 	if direita:
 		direcao += 1
-		$sprite.set_frame(1)
-	else:
-		$sprite.set_frame(0)
 	#caso seja apertado o botao para esquerdo percorra um pixel a esquerda.
 	if esquerda:
 		direcao -= 1
-		$sprite.set_frame(2)
-	else:
-		$sprite.set_frame(0)
 		
 	translate(Vector2(1,0) * velocidade * direcao * delta);
 	limitar_paredes()

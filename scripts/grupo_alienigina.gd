@@ -9,8 +9,7 @@ var pre_nave_mae = preload("res://cenas/nave_mae.tscn")
 const velocidade = Vector2(6,0)
 
 #------------------------- declarando variaveis -------------------------------#
-var direcao = 1;
-var notas = 0;
+var direcao = 1
 
 #--------------------------- declarando sinais --------------------------------#
 signal inimigo_destruido(obj)
@@ -19,15 +18,20 @@ signal terra_dominada()
 signal vencedor()
 
 func _ready():
-	$timer_tiro_alien.start();
-	restart_nave_mae();
+	
+	$timer_tiro_alien.start()
+	
+	restart_nave_mae()
+	
 	for alien in $aliens.get_children():
 		alien.hide()
 		alien.connect("destroido",self,"_chame_sinal_destroido")
+		
 	for alien in $aliens.get_children():
 		$timer_pausa.start()
 		yield($timer_pausa, "timeout")
 		alien.show()
+		
 	emit_signal("estou_pronto")
 	volta_tudo()
 	
@@ -48,12 +52,6 @@ func _tiro_alien():
 		tiro_alien.set_global_position(alien.get_global_position())
 		
 func _on_timer_movimento_timeout():
-	
-	#sons.append(notas)
-	notas += 1
-	if notas > 4:
-		notas = 1;
-		
 	var borda = false
 	
 	for alien in $aliens.get_children():
@@ -111,14 +109,14 @@ func _on_timer_nave_mae_timeout():
 func restart_nave_mae():
 	$timer_nave_mae.set_wait_time(rand_range(6,16))
 	$timer_nave_mae.start()
-		
+
 func para_tudo():
 	$timer_nave_mae.stop()
 	$timer_tiro_alien.stop()
 	$timer_movimento.stop()
-	
+
 func volta_tudo():
 	$timer_nave_mae.start()
 	$timer_tiro_alien.start()
 	$timer_movimento.start()
-	
+
